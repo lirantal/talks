@@ -25,14 +25,14 @@ npm run build
 
 ## Validation and compatibility
 
-A normal `npm ci` currently fails with `EBADENGINE`: the locked `@nuxt/kit-edge` and `@nuxt/schema-edge` prereleases declare support for Node.js 14/16/17/18, while this source revision requires Node.js 24+ and enables strict engine checking. The same failure was reproduced in the original repository. The migration preserves its dependency versions and `.npmrc` rather than silently changing that policy.
+A clean `npm ci --no-audit --no-fund` and `npm run build` both pass on Node.js 26.5.0 and npm 11.21.0, without engine flags or dependency overrides. The original `.npmrc` policies remain enabled, including strict engine checking and disabled lifecycle scripts.
 
-A diagnostic install with engine checking disabled for that one command, while lifecycle scripts stayed disabled, was used to assess the deck separately from the conflicting engine declarations. The original `npm run build` then passed and produced `src/dist/index.html`. This diagnostic does not make the normal installation path pass. Updating the historical toolchain is separate work.
+The imported lockfile pinned `@vueuse/motion` to a beta that requested obsolete Nuxt edge prereleases restricted to Node 14–18. Refreshing that transitive dependency within Slidev’s existing allowed range resolves `@vueuse/motion` 2.2.6 and stable `@nuxt/kit` 3.21.11, which supports Node 18.12+. Slidev, its theme, the package manifest, and presentation sources are unchanged. The refreshed versions are locked for repeatable installation.
 
 PDF export and a visual browser review were not performed. The slide content and Vue sources are unchanged.
 
 ## Migration provenance
 
-Imported from [lirantal/slides-react-security-2022 at `f1592eb`](https://github.com/lirantal/slides-react-security-2022/tree/f1592ebae8846df1d811e7f02787dfb9b9a20710). All imported slide sources, components, footer, package files, and npm settings are byte-for-byte copies. No dependency upgrades or slide rewrites were made.
+Imported from [lirantal/slides-react-security-2022 at `f1592eb`](https://github.com/lirantal/slides-react-security-2022/tree/f1592ebae8846df1d811e7f02787dfb9b9a20710). The imported slide sources, components, footer, package manifest, and npm settings are byte-for-byte copies. The lockfile’s animation dependency branch was refreshed to fix Node compatibility; no framework upgrades or slide rewrites were made.
 
 The original repository remains in place. Repository-level hosting configuration and contribution boilerplate were not imported. No automatic deployment is configured for this talk in this repository.
