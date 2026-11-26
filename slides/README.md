@@ -10,4 +10,6 @@ Presentation decks, source files, and supporting demos, organized by talk.
 
 - [Friend or Foe? TypeScript Security Fallacies](typescript-security-fallacies/) — TypeScript security pitfalls, with default, 25-minute, and 40-minute slide variants.
 
+- [From Second Brain to AI Chief-of-Staff](from-second-brain-to-ai-chief-of-staff/) — PDF presentation export.
+
 See the [repository guide](../README.md) for naming, contents, and event editions.
