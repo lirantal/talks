@@ -1,4 +1,5 @@
 ---
+routerMode: hash
 theme: penguin
 colorSchema: 'auto'
 layout: intro
@@ -99,7 +100,7 @@ https://sysdig.com/2022-cloud-native-security-and-usage-report
 
 ---
 layout: text-image
-media: /fedora-packaging-guidelines-0.png
+media: ./fedora-packaging-guidelines-0.png
 ---
 
 # Fedora Packaging Guidelines
@@ -108,7 +109,7 @@ media: /fedora-packaging-guidelines-0.png
 
 ---
 layout: text-image
-media: /fedora-packaging-guidelines-1.png
+media: ./fedora-packaging-guidelines-1.png
 ---
 
 # Fedora Packaging Guidelines<sup>1</sup>
@@ -124,7 +125,7 @@ media: /fedora-packaging-guidelines-1.png
 
 ---
 layout: text-image
-media: /fedora-packaging-guidelines-2.png
+media: ./fedora-packaging-guidelines-2.png
 ---
 
 # Fedora Packaging Guidelines
@@ -144,7 +145,7 @@ media: ''
 
 ---
 layout: text-image
-media: /npmjs-packaging-guideslines-0.png
+media: ./npmjs-packaging-guideslines-0.png
 ---
 
 # npmjs registry packaging guidelines<sup>1</sup>

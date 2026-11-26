@@ -1,9 +1,10 @@
 # How React Applications Get Hacked in the Real World — Lightning Talk
 
+[View published slides](https://lirantal.github.io/talks/react-security-lightning-talk/)
+
 The React Summit 2022 lightning version: security best practices in seven minutes, covering output encoding and XSS escape hatches in React applications.
 
 - [Slide source](src/slides.md)
-- [Hosted slides](https://slides-react-security-lightning-talk-2022.vercel.app)
 - [Images](assets/)
 
 ## Local development
@@ -30,6 +31,6 @@ On Node.js 26.5.0 with npm 11.21.0, a clean `npm ci --no-audit --no-fund` and `n
 
 Imported from [lirantal/slides-react-security-lightning-talk-2022 at `5e45792`](https://github.com/lirantal/slides-react-security-lightning-talk-2022/tree/5e457928e60baaac290bf6c46b3a37dd9487ca89). The original deck, image files, components, keyboard shortcuts, metadata, and dependency manifest are retained. Local asset references and their public-directory configuration were adapted to fit this repository’s layout. The lockfile refreshes the transitive `@vueuse/motion` resolution from `2.0.0-beta.18` to `2.2.6` within Slidev’s existing dependency range. This replaces the obsolete Nuxt edge prereleases that conflicted with the declared Node.js version. The Slidev and theme versions, root dependency ranges, and `.npmrc` policies remain unchanged.
 
-The source identifies React Summit 2022 but does not establish an exact delivered snapshot, so the files remain current imported source rather than a dated event edition. The original repository and hosted presentation remain in place. Hosting configuration and repository administration files were not imported; no deployment is configured here.
+The source identifies React Summit 2022 but does not establish an exact delivered snapshot, so the files remain current imported source rather than a dated event edition. The original repository and hosted presentation remain in place. Hosting configuration and repository administration files were not imported; the root GitHub Pages workflow publishes this deck.
 
 Code samples demonstrate security vulnerabilities for presentation purposes. Do not run attack payloads as setup commands.

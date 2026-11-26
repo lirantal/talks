@@ -1,4 +1,5 @@
 ---
+routerMode: hash
 theme: "neversink"
 layout: intro
 color: black

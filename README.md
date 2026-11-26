@@ -2,7 +2,8 @@
 
 Slides, presentation sources, demos, and workshop materials by [Liran Tal](https://lirantal.com).
 
-- [Slides and presentations](slides/)
+- [View published slides](https://lirantal.github.io/talks/)
+- [Slide sources and presentation materials](slides/)
 - [Workshops](workshops/)
 - [Speaking and invitations](https://lirantal.com/speaking)
 - [Public-speaking history](https://github.com/lirantal/public-speaking)
@@ -69,3 +70,19 @@ Store recordings on a video host and link to them. Prefer external downloads for
 | This repository | Slides, editable sources, demos, and workshop materials |
 
 Link to existing event records instead of copying the full speaking archive here. Event records can link back to the exact edition of the materials.
+
+## Published slides
+
+GitHub Pages serves each deck at `https://lirantal.github.io/talks/<talk-slug>/`. The TypeScript 25-minute and 40-minute variants are at `typescript-security-fallacies/25m/` and `typescript-security-fallacies/40m/`. The [published index](https://lirantal.github.io/talks/) links to every deck. Slide navigation uses URL fragments so links to individual slides survive refreshes on static hosting.
+
+The [Publish slides workflow](.github/workflows/pages.yml) builds on pull requests and publishes successful builds from `main`, or when manually dispatched on `main`. Builds use Node.js 24, npm 11.21.0, each deck’s lockfile and npm security settings, and each deck’s own Slidev version. Only built static files are uploaded. Build jobs have read-only repository access; the separate deployment job receives Pages permissions.
+
+To build the complete site locally with Node.js 24+ and npm 11.21.0:
+
+```bash
+node scripts/build-pages.mjs
+```
+
+This installs locked dependencies per talk and writes the site to `_site/`. For a simple local preview at the server root, build with `PAGES_BASE_PATH=/ node scripts/build-pages.mjs`, then run `python3 -m http.server 4173 --directory _site` and open http://localhost:4173. There is no shared slide framework dependency. The build defaults to `/talks/`; set `PAGES_BASE_PATH` to a slash-delimited path when testing a different prefix.
+
+To publish another deck, add its source and lockfile under `slides/<talk-slug>/src/`, use `routerMode: hash` in its Slidev headmatter, and add an entry to [pages.json](pages.json). Use a separate entry with `source` for variants sharing dependencies. Verify the deck’s public asset URLs under its published base path before merging. Publication is all-or-nothing: a failed deck build leaves the previous site deployed.

@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "your-ai-agent-installed-malware",
+    "title": "Your AI Agent Installed Malware Because a SKILL.md Told It To",
+    "entry": "talk-agent-scan-and-malicious-skills.md",
+    "localTheme": true
+  },
+  {
+    "slug": "typescript-security-fallacies",
+    "title": "Friend or Foe? TypeScript Security Fallacies",
+    "entry": "slides.md"
+  },
+  {
+    "slug": "typescript-security-fallacies/25m",
+    "source": "typescript-security-fallacies",
+    "title": "TypeScript Security Fallacies — 25 minutes",
+    "entry": "slides-25m.md"
+  },
+  {
+    "slug": "typescript-security-fallacies/40m",
+    "source": "typescript-security-fallacies",
+    "title": "TypeScript Security Fallacies — 40 minutes",
+    "entry": "slides-40m.md"
+  },
+  {
+    "slug": "supply-chain-security",
+    "title": "A subtle introduction to supply chain security and container signing with Sigstore and Cosign",
+    "entry": "slides.md"
+  },
+  {
+    "slug": "react-security",
+    "title": "How React Applications Get Hacked in the Real World",
+    "description": "Imported introduction and theme starter slides; the original repository did not contain the complete talk.",
+    "entry": "slides.md"
+  },
+  {
+    "slug": "react-security-lightning-talk",
+    "title": "How React Applications Get Hacked in the Real World — Lightning Talk",
+    "entry": "slides.md"
+  }
+]

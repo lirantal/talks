@@ -1,5 +1,7 @@
 # A subtle introduction to supply chain security and container signing with Sigstore and Cosign
 
+[View published slides](https://lirantal.github.io/talks/supply-chain-security/)
+
 A supply chain security talk by Liran Tal, covering packaging practices, software supply chain threats, and container signing with Sigstore and Cosign.
 
 - [Slide source](src/slides.md)
@@ -8,7 +10,7 @@ A supply chain security talk by Liran Tal, covering packaging practices, softwar
 
 ## Organization
 
-`src/` contains the editable Slidev deck, local component, Vite configuration, and original dependency manifests. `assets/` holds the four local screenshots used by the talk. The Vite configuration serves `../assets/` as its public directory, and the deck’s four local screenshot references use the corresponding root URLs. This also includes those screenshots in production builds; the original custom `media:` references were left as literal strings without copying the files. Other presentation content is preserved.
+`src/` contains the editable Slidev deck, local component, Vite configuration, and original dependency manifests. `assets/` holds the four local screenshots used by the talk. The Vite configuration serves `../assets/` as its public directory, and the deck’s four local screenshot references use document-relative URLs so the theme can load them below the published base path. This also includes those screenshots in production builds; the original custom `media:` references were left as literal strings without copying the files. Other presentation content is preserved.
 
 The original starter deck remains as `slides-orig.md`; it is not an additional talk or a delivered event edition. Exact delivery dates and durations are not recorded here because the imported repository does not establish them.
 
@@ -36,4 +38,4 @@ The retained Vite configuration imports `vite-svg-loader`, supplied transitively
 
 Imported from [lirantal/slides-supply-chain-security at `1d6dad3`](https://github.com/lirantal/slides-supply-chain-security/tree/1d6dad3521f9bb67b511deda213186909fe7b1db). The complete source revision is `1d6dad3521f9bb67b511deda213186909fe7b1db`. The dependency lockfile was subsequently refreshed to resolve the Node compatibility issue described above; it is not a byte-for-byte copy of that revision.
 
-The original repository remains in place. Hosting configuration, repository contribution boilerplate, and the original repository README were not copied because they describe the standalone repository rather than this talk folder. No automatic deployment or new license is configured. No event snapshot is claimed.
+The original repository remains in place. Hosting configuration, repository contribution boilerplate, and the original repository README were not copied because they describe the standalone repository rather than this talk folder. The root GitHub Pages workflow publishes this deck. No new license is configured. No event snapshot is claimed.

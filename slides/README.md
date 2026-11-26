@@ -1,13 +1,17 @@
 # Slides
 
-Presentation decks, source files, and supporting demos, organized by talk.
+[Browse all published slides](https://lirantal.github.io/talks/)
 
-- [Your AI Agent Installed Malware Because a SKILL.md Told It To](your-ai-agent-installed-malware/) — Malicious agent skills, live attack examples, and supply chain defenses.
-- [A subtle introduction to supply chain security and container signing with Sigstore and Cosign](supply-chain-security/) — Packaging practices, supply chain threats, and container signing.
-- [How React Applications Get Hacked in the Real World](react-security/) — Original React talk cover and Slidev starter source; the imported repository does not contain the complete presentation.
+| Presentation | Materials |
+| --- | --- |
+| [Your AI Agent Installed Malware Because a SKILL.md Told It To](https://lirantal.github.io/talks/your-ai-agent-installed-malware/) | [Source](your-ai-agent-installed-malware/) |
+| [Friend or Foe? TypeScript Security Fallacies](https://lirantal.github.io/talks/typescript-security-fallacies/) | [Source](typescript-security-fallacies/) |
+| [A subtle introduction to supply chain security and container signing with Sigstore and Cosign](https://lirantal.github.io/talks/supply-chain-security/) | [Source](supply-chain-security/) |
+| [How React Applications Get Hacked in the Real World](https://lirantal.github.io/talks/react-security/) | [Source](react-security/) |
+| [How React Applications Get Hacked in the Real World — Lightning Talk](https://lirantal.github.io/talks/react-security-lightning-talk/) | [Source](react-security-lightning-talk/) |
 
-- [How React Applications Get Hacked in the Real World — Lightning Talk](react-security-lightning-talk/) — The seven-minute React Summit version, covering output encoding and XSS pitfalls.
+TypeScript variants: [25 minutes](https://lirantal.github.io/talks/typescript-security-fallacies/25m/) · [40 minutes](https://lirantal.github.io/talks/typescript-security-fallacies/40m/).
 
-- [Friend or Foe? TypeScript Security Fallacies](typescript-security-fallacies/) — TypeScript security pitfalls, with default, 25-minute, and 40-minute slide variants.
+The full React import contains the original introduction and theme starter slides; its source repository did not contain the complete presentation.
 
 See the [repository guide](../README.md) for naming, contents, and event editions.

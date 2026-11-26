@@ -1,5 +1,7 @@
 # How React Applications Get Hacked in the Real World
 
+[View published slides](https://lirantal.github.io/talks/react-security/)
+
 Presentation source by Liran Tal, imported from `slides-react-security-2022`.
 
 - [Editable slide source](src/slides.md)
@@ -35,4 +37,4 @@ PDF export and a visual browser review were not performed. The slide content and
 
 Imported from [lirantal/slides-react-security-2022 at `f1592eb`](https://github.com/lirantal/slides-react-security-2022/tree/f1592ebae8846df1d811e7f02787dfb9b9a20710). The imported slide sources, components, footer, package manifest, and npm settings are byte-for-byte copies. The lockfile’s animation dependency branch was refreshed to fix Node compatibility; no framework upgrades or slide rewrites were made.
 
-The original repository remains in place. Repository-level hosting configuration and contribution boilerplate were not imported. No automatic deployment is configured for this talk in this repository.
+The original repository remains in place. Repository-level hosting configuration and contribution boilerplate were not imported. The root GitHub Pages workflow publishes this deck.

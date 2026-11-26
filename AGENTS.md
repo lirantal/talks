@@ -26,7 +26,7 @@ The speaking website is at https://lirantal.com/speaking. The engagement archive
 
 ## Tooling and verification
 
-- There is no repository-wide slide framework, package manager, build, or test command. Inspect the affected folder before choosing tools.
+- Slide frameworks and dependency manifests remain local to each deck. `node scripts/build-pages.mjs` installs locked dependencies and builds all entries in `pages.json` into `_site/`; use Node 24+ and npm 11.21.0. Inspect the affected folder before choosing other tools.
 - Keep any required tooling and dependency manifests local to the relevant talk or workshop unless shared tooling is explicitly requested.
 - For documentation changes, check relative links, directory examples, and consistency with the actual files. No application test suite is required for prose-only changes.
 - For deck or demo changes, follow local build instructions and run relevant checks when available. Inspect rendered slides when changing visual content. Report checks that could not be run.
@@ -35,3 +35,7 @@ The speaking website is at https://lirantal.com/speaking. The engagement archive
 ## Git workflow
 
 Follow the user’s requested branch and publishing scope. Use concise Conventional Commit messages. Before committing, review the staged files for unrelated changes and sensitive content. Before pushing, check for publishing workflows and follow their instructions. Do not add automatic deployment or change domain settings unless requested.
+
+## GitHub Pages
+
+The Pages workflow builds pull requests and deploys successful builds from `main`. Changes to slides, `pages.json`, or the publishing scripts on `main` trigger publication. Keep deployment permissions confined to the deployment job and checkout credentials disabled. Never deploy pull request code. Add new published decks to `pages.json`, use hash routing, and verify images and navigation at their actual `/talks/<slug>/` base path. Do not replace each deck’s local framework or lockfile with shared dependencies.

@@ -1,5 +1,7 @@
 # Friend or Foe? TypeScript Security Fallacies
 
+[View published slides](https://lirantal.github.io/talks/typescript-security-fallacies/) · [25-minute version](https://lirantal.github.io/talks/typescript-security-fallacies/25m/) · [40-minute version](https://lirantal.github.io/talks/typescript-security-fallacies/40m/)
+
 TypeScript security slides by Liran Tal, with the original default, 25-minute, and 40-minute variants.
 
 | Variant | Source | Cover label |
@@ -40,4 +42,4 @@ Imported from [lirantal/slides-typescript-security at `91d08e6`](https://github.
 
 All three deck variants and the image files are preserved. Slide content changes are limited to image paths. Dependency versions and integrity entries remain unchanged; the lockfile’s root lifecycle-script metadata was updated to match removal of `postinstall`.
 
-The original repository remains in place. Repository-level hosting configuration, contribution boilerplate, and GitHub metadata were not imported. No deployment or domain configuration is added here.
+The original repository remains in place. Repository-level hosting configuration, contribution boilerplate, and GitHub metadata were not imported. The root GitHub Pages workflow publishes this deck; custom domain configuration is not required.
