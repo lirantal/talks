@@ -8,7 +8,7 @@ The React Summit 2022 lightning version: security best practices in seven minute
 
 ## Local development
 
-The original package specifies Node.js 24+ and npm 11.10.0+. Its preserved lockfile also contains `@nuxt/kit-edge` and `@nuxt/schema-edge` versions that only accept Node 14–18. With `engine-strict=true`, the standard install currently fails with `EBADENGINE`; this was reproduced in the unchanged original repository. Dependency modernization is separate from this migration.
+Requires Node.js 24+ and npm 11.10.0+. The standard locked installation and production build were verified with Node.js 26.5.0 and npm 11.21.0.
 
 The existing development commands, run from this talk’s `src/` directory, are:
 
@@ -24,11 +24,11 @@ Dependencies are locked and the original `.npmrc` security settings are retained
 
 ## Validation
 
-On Node.js 26.5.0 with npm 11.21.0, the standard locked install fails with the engine conflict above. For migration verification only, a temporary `npm ci --engine-strict=false --ignore-scripts --no-audit --no-fund` install succeeded and `npm run build` passed. The committed security settings are unchanged. Every image matches the source byte for byte, every adjusted asset reference resolves, and slide content is unchanged apart from those paths. PDF export and browser playback were not verified.
+On Node.js 26.5.0 with npm 11.21.0, a clean `npm ci --no-audit --no-fund` and `npm run build` both pass with the committed strict engine and security settings enabled. All seven images match the original source byte for byte and are copied unchanged into the built site. Every adjusted asset reference resolves, and slide content is unchanged apart from those paths. PDF export and browser playback were not verified.
 
 ## Migration provenance
 
-Imported from [lirantal/slides-react-security-lightning-talk-2022 at `5e45792`](https://github.com/lirantal/slides-react-security-lightning-talk-2022/tree/5e457928e60baaac290bf6c46b3a37dd9487ca89). The original deck, image files, components, keyboard shortcuts, metadata, dependency manifest, and lockfile are retained. Only local asset references and their public-directory configuration were changed to fit this repository’s layout.
+Imported from [lirantal/slides-react-security-lightning-talk-2022 at `5e45792`](https://github.com/lirantal/slides-react-security-lightning-talk-2022/tree/5e457928e60baaac290bf6c46b3a37dd9487ca89). The original deck, image files, components, keyboard shortcuts, metadata, and dependency manifest are retained. Local asset references and their public-directory configuration were adapted to fit this repository’s layout. The lockfile refreshes the transitive `@vueuse/motion` resolution from `2.0.0-beta.18` to `2.2.6` within Slidev’s existing dependency range. This replaces the obsolete Nuxt edge prereleases that conflicted with the declared Node.js version. The Slidev and theme versions, root dependency ranges, and `.npmrc` policies remain unchanged.
 
 The source identifies React Summit 2022 but does not establish an exact delivered snapshot, so the files remain current imported source rather than a dated event edition. The original repository and hosted presentation remain in place. Hosting configuration and repository administration files were not imported; no deployment is configured here.
 
