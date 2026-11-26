@@ -1,0 +1,30 @@
+{
+  "name": "all-you-need-for-appsec-is-typescript",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev:1": "slidev --open slides-40m.md",
+    "dev:2": "slidev --open slides-25m.md",
+    "export": "slidev export",
+    "dev": "slidev slides.md",
+    "build:25m": "slidev build slides-25m.md --out dist-25m",
+    "build:40m": "slidev build slides-40m.md --out dist-40m",
+    "prepare:theme": "node scripts/apply-theme-patch.mjs"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.0.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-addon-bluesky": "^1.0.0",
+    "slidev-theme-neversink": "^0.3.6",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "playwright-chrome": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.10.0"
+  }
+}
