@@ -24,18 +24,16 @@ npm run build
 
 `dev` serves `slides.md`; `build` writes the static site to `src/dist/`. `npm run export` is the original PDF export command and requires Slidev’s browser export prerequisites. No PDF export is bundled.
 
-### Existing dependency compatibility issue
+### Runtime compatibility
 
-A normal `npm ci` currently fails with `EBADENGINE`. The project requires Node.js 24+ and npm 11.10+, but its locked `@nuxt/kit-edge` and `@nuxt/schema-edge` versions declare support only for Node.js 14–18. This conflict is inherited from the original repository and was reproduced there with Node.js 26.5.0 and npm 11.21.0.
+Use Node.js 24+ and npm 11.10+, as required by the original manifest. A clean `npm ci` and `npm run build` were verified with Node.js 26.5.0 and npm 11.21.0, using the committed npm policies without overrides. All four local screenshots were verified byte-for-byte in the generated output. PDF export and browser rendering were not checked.
 
-The lockfile and `.npmrc` security policies, including `engine-strict=true` and disabled lifecycle scripts, are preserved. Resolving the dependency/runtime compatibility conflict is separate maintenance work. The commands above describe the intended workflow, not a successful clean installation with the preserved dependency set.
-
-For migration verification only, a temporary diagnostic installation with `--engine-strict=false --ignore-scripts` allowed `npm run build` to complete in both the original and migrated checkout. This override is not part of the committed configuration or the normal setup instructions. All four local screenshots were verified byte-for-byte in the generated output. PDF export and browser rendering were not checked.
+The imported lockfile contained an old `@vueuse/motion` beta whose Nuxt edge dependencies rejected Node.js 24+. The lockfile now resolves `@vueuse/motion` 2.2.6 and compatible Nuxt dependencies within the existing dependency ranges. Slidev 0.31.4, the Penguin theme 1.4.1, Vite 2.9.9, Vue 3.2.36, the package manifest, and `.npmrc` security settings remain unchanged. `engine-strict=true`, disabled lifecycle scripts, and the release-age policy remain enabled.
 
 The retained Vite configuration imports `vite-svg-loader`, supplied transitively by the locked theme dependency. Remote images and diagrams remain at their original URLs and require network access; their availability was not verified during this migration.
 
 ## Migration provenance
 
-Imported from [lirantal/slides-supply-chain-security at `1d6dad3`](https://github.com/lirantal/slides-supply-chain-security/tree/1d6dad3521f9bb67b511deda213186909fe7b1db). The complete source revision is `1d6dad3521f9bb67b511deda213186909fe7b1db`.
+Imported from [lirantal/slides-supply-chain-security at `1d6dad3`](https://github.com/lirantal/slides-supply-chain-security/tree/1d6dad3521f9bb67b511deda213186909fe7b1db). The complete source revision is `1d6dad3521f9bb67b511deda213186909fe7b1db`. The dependency lockfile was subsequently refreshed to resolve the Node compatibility issue described above; it is not a byte-for-byte copy of that revision.
 
 The original repository remains in place. Hosting configuration, repository contribution boilerplate, and the original repository README were not copied because they describe the standalone repository rather than this talk folder. No automatic deployment or new license is configured. No event snapshot is claimed.
