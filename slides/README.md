@@ -6,4 +6,6 @@ Presentation decks, source files, and supporting demos, organized by talk.
 - [A subtle introduction to supply chain security and container signing with Sigstore and Cosign](supply-chain-security/) — Packaging practices, supply chain threats, and container signing.
 - [How React Applications Get Hacked in the Real World](react-security/) — Original React talk cover and Slidev starter source; the imported repository does not contain the complete presentation.
 
+- [How React Applications Get Hacked in the Real World — Lightning Talk](react-security-lightning-talk/) — The seven-minute React Summit version, covering output encoding and XSS pitfalls.
+
 See the [repository guide](../README.md) for naming, contents, and event editions.
