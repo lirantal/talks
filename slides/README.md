@@ -14,4 +14,6 @@ TypeScript variants: [25 minutes](https://lirantal.github.io/talks/typescript-se
 
 The full React import contains the original introduction and theme starter slides; its source repository did not contain the complete presentation.
 
+- [From Second Brain to AI Chief-of-Staff](from-second-brain-to-ai-chief-of-staff/) — PDF presentation export.
+
 See the [repository guide](../README.md) for naming, contents, and event editions.
