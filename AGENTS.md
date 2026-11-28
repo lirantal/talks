@@ -12,7 +12,7 @@ The speaking website is at https://lirantal.com/speaking. The engagement archive
 - Use stable lowercase, hyphen-separated slugs. Put dates and events in `editions/YYYY-MM-DD-event-slug/`, not in the main talk folder name.
 - Start with a README and the available materials. Add `src/`, `assets/`, `demos/`, and other folders only as needed. Use `src/` for presentation sources to avoid `slides/<talk>/slides/` repetition.
 - Keep resources beside the talk that uses them. Put assets or themes used by several talks in `shared/`.
-- Update the slides or workshops index when adding materials. Use relative links within the repository.
+- Whenever adding a talk, workshop, or other materials, update the relevant directory's `README.md` listing. Include the title and relative links to materials that are actually available, and update existing entries when materials are added, removed, or changed. Do not describe a deck as published unless it is live on the published site.
 
 ## Content and preservation
 
